@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InventoryDB" Class="InventoryDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\InventoryDB.mdf;Integrated Security=True" SettingsObjectName="Dungeon_Play.Properties.Settings" SettingsPropertyName="InventoryDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="itemName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="bonusType" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="bonusValue" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="minDamage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxDamage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="attackValue" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="armorClass" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="weight" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="volume" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="slot" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="imageName" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>
